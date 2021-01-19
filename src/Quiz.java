@@ -74,9 +74,9 @@ public class Quiz {
     }
 
     public Question findByIndex(int i) {
-        int p = 0;
+        int j = 0;
         for (Question q : questions) {
-            if (i == p) {
+            if (i == j) {
                 return q;
             }
         }
@@ -121,9 +121,6 @@ class Question {
     int correct;
     ArrayList<String> answers = new ArrayList<>();
 
-    public Question() {
-
-    }
     public void setQuestion(String s) {
         this.question = s;
     }
@@ -143,7 +140,7 @@ class Question {
         if (answer.size() >= 2 && answer.size() <= 4) {
             this.answers = answer;
         } else {
-            System.out.println("exceed range amount (2-4)");
+            System.out.println("Exceed range amount (2-4)");
             this.answers = null;
         }
         this.question = question;
